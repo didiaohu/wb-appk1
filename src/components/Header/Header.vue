@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="header">
-
+    
     <div class="title">
       <i @click.stop.prevent="showAsideMenu" class="icon-menu"></i>
-      <h1></h1>
+      <h1>Node社区</h1>
       <i @click="showMsg" v-show="ak" class="icon-msg"></i>
       <span v-show="ak" class="msg-count">{{msgCount}}</span>
     </div>

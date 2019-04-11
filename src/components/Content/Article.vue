@@ -19,10 +19,10 @@
           <div class="total-reply">{{infos.reply_count}} 回复</div>
         </div>
 
-        <div class="reply-input">
+        <!-- <div class="reply-input">
           <input v-model.trim="replyContent" type="text" placeholder="请输入回复内容">
           <button @click="reply('')" type="button">回复</button>
-        </div>
+        </div> -->
 
         <div v-for="(item, index) of replies" class="reply-item">
 
@@ -41,13 +41,13 @@
 
           <div v-html="item.content" class="reply-content"></div>
 
-          <transition name="slide-top">
+          <!-- <transition name="slide-top">
             <div v-show="currentIndex===index" class="reply-one">
               <input type="text" name="" v-model.trim="replyOneContent" :placeholder="'@' + item.author.loginname">
               <button @click="reply(item.id, item.author.loginname)">回复</button>
               <button @click="currentIndex=null;replyOneContent=''">取消</button>
             </div>
-          </transition>
+          </transition> -->
 
 
         </div>

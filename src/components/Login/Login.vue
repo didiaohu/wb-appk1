@@ -124,7 +124,7 @@ export default {
         width: 320px;
         // border-radius: 5px;
         border-bottom: 1px solid gray;
-        font-size: 1.3rem;
+        font-size: 1rem;
         padding: 0;
       }
       input:focus {
@@ -132,12 +132,13 @@ export default {
       }
 
       button {
-        margin-top: 50px;
-        font-size: 1.3rem;
+        margin-top: 30px;
+        width: 320px;
+        font-size: 1.1rem;
         background-color: #2196f3;
         color: white;
         border: none;
-        padding: 5px 10px;
+        padding: 10px 0;
         border-radius: 3px;
         letter-spacing: 3px;
         outline: none;

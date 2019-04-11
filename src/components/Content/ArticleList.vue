@@ -63,8 +63,8 @@ export default {
   created() {
     if (!this.ak) {
       this.$store.commit('showLogin', true);
-      return;
     }
+
     this.$store.commit('changeTab', {isLoading: true})
     this.axios.get('https://cnodejs.org/api/v1/topics')
       .then(result => result.data.data)

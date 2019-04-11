@@ -103,9 +103,6 @@ export default {
     right: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: white;
 
     .msg-header {
@@ -169,14 +166,15 @@ export default {
     }
 
     .msg-list {
+      overflow-y: scroll;
       flex: 1;
       width: 100%;
+      height: 100%;
       .msg-item {
         display: flex;
         align-items: center;
         width: 100%;
         padding: 10px;
-
         .msg-avatar {
           width: 50px;
           height: 50px;
