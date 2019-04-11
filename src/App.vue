@@ -12,6 +12,10 @@
     </transition>
 
     <transition name="show">
+      <Rigister v-if="isShowRegister"></Rigister>
+    </transition>
+
+    <transition name="show">
       <Info v-if="isShowInfo"></Info>
     </transition>
 
@@ -37,6 +41,7 @@ import VHeader from './components/Header/Header.vue';
 import VContent from './components/Content/Content.vue';
 import AsideMenu from './components/AsideMenu/AsideMenu.vue';
 import Login from './components/Login/Login.vue';
+import Rigister from './components/Register/Register.vue';
 import Info from './components/Info/Info.vue';
 import Msg from './components/Msg/Msg.vue';
 import NewArticle from './components/NewArticle/NewArticle.vue';
@@ -49,6 +54,7 @@ export default {
     VContent,
     AsideMenu,
     Login,
+    Rigister,
     Info,
     Msg,
     NewArticle,
@@ -57,6 +63,9 @@ export default {
   computed: {
     isShowLogin() {
       return this.$store.state.isShowLogin;
+    },
+    isShowRegister() {
+      return this.$store.state.isShowRegister;
     },
     isShowInfo() {
       return this.$store.state.isShowInfo;

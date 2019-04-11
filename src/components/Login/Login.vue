@@ -1,20 +1,17 @@
 <template lang="html">
   <div class="login">
     <div class="login-header">
-      <i @click="showLogin" class="icon-back"></i>登录
+      <!-- <i @click="showLogin" class="icon-back"></i> -->登录
     </div>
 
     <div class="input">
-      <input v-model="inputVal" type="text" placeholder="请输入Access Token">
-      <button @click.stop.prevent="check(inputVal)">验证</button>
+      <input type="text" placeholder="请输入账号">
+      <input type="text" placeholder="请输入密码">
+      <button @click.stop.prevent="check('e052dce6-9b8e-4c04-b38d-46f25166c050')">登录</button>
     </div>
-
-    <div class="tips">
+    <div class="tips" @click="goRegister">
       <ul>
-        <li>为了更好的体验请登录😊</li>
-        <li>输入CNode账号的Access Token😄</li>
-        <li>在个人中心可以获取Access Token😉</li>
-        <li>调用的是官方API,请放心使用🤗</li>
+        <li>注册</li>
       </ul>
     </div>
 
@@ -56,6 +53,10 @@ export default {
           localStorage.ak = ak;
           this.showLogin();
         })
+    },
+    goRegister() {
+      this.$store.commit('showLogin', false);
+      this.$store.commit('showRegister', true);
     }
   },
 
@@ -144,11 +145,11 @@ export default {
     }
     .tips {
       flex: 2;
-      color: gray;
+      color: #2196f3;
       // box-shadow: 0 0 10px gray;
       // border: 1px solid gray;
       li {
-        // list-style: none;
+        list-style: none;
       }
     }
   }

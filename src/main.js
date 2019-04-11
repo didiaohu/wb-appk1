@@ -24,6 +24,7 @@ const store = new Vuex.Store({
     isMore: false,
     isShowAsideMenu: false,
     isShowLogin: false,
+    isShowRegister: false,
     isShowInfo: false,
     isShowMsg: false,
     isShowNewArticle: false,
@@ -53,6 +54,9 @@ const store = new Vuex.Store({
     },
     showLogin(state, flag) {
       state.isShowLogin = flag;
+    },
+    showRegister(state, flag) {
+      state.isShowRegister = flag;
     },
     showInfo(state, flag) {
       state.isShowInfo = flag;
