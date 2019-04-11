@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="article-list">
-
     <transition-group name="slide-top">
       <div v-for="(item, index) of articleList" :key="item.last_reply_at+index" class="item">
         <div class="avatar">
@@ -52,6 +51,9 @@ export default {
     },
     isMore() {
       return this.$store.state.isMore;
+    },
+    ak() {
+      return this.$store.state.ak;
     }
   },
   methods: {
@@ -59,6 +61,10 @@ export default {
   },
 
   created() {
+    if (!this.ak) {
+      this.$store.commit('showLogin', true);
+      return;
+    }
     this.$store.commit('changeTab', {isLoading: true})
     this.axios.get('https://cnodejs.org/api/v1/topics')
       .then(result => result.data.data)

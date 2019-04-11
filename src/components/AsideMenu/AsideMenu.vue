@@ -5,7 +5,7 @@
 
         <div class="user">
           <div class="user-avatar">
-            <img @click="showLogin" :src="userInfo.avatar_url || 'http://omratag7g.bkt.clouddn.com/icon-unlogin.svg'" alt="">
+            <img @click="showLogin" :src="userInfo.avatar_url || 'https://icdn.microzz.com/20170417_vue_cnode/icon-unlogin.svg'" alt="">
             <!-- <img @click="showLogin" :src="userInfo.avatar_url || 'https://icdn.microzz.com/20170417_vue_cnode/icon-unlogin.svg'" alt=""> -->
           </div>
           <div class="username">
@@ -27,18 +27,12 @@
             <i class="icon-info"></i>个人中心
           </div>
 
-          <div @click="showAbout" class="about block">
+          <!-- <div @click="showAbout" class="about block">
             <i class="icon-about"></i>关于
-          </div>
-
-          <div class="cnode"></div>
-
+          </div> -->
         </div>
-
       </div>
-
       <div @click.stop.prevent="showAsideMenu" class="mask"></div>
-
     </div>
   </transition>
 
